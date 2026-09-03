@@ -1,0 +1,21 @@
+name: entrokv
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.24
+  - pytest>=7.0
+  - pytorch>=2.1
+  - pip:
+      - tree-sitter>=0.20,<0.22
+      - tree-sitter-languages>=1.10
+      - transformers>=4.36
+      - accelerate
+      # vLLM requires a matching CUDA toolchain; install from the wheel for your
+      # GPU architecture:
+      # - vllm>=0.4.0
+      - -e .
